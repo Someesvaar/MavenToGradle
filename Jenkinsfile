@@ -19,9 +19,9 @@ pipeline {
             }
         }
 
-        stage('Build Gradle') {
+        stage('Migrate Maven to Gradle') {
             steps {
-                sh 'gradle build'  // Run Gradle build
+                sh 'gradle init --type pom'  // Run Gradle build
             }
         }
 
